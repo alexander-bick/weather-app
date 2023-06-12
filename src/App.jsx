@@ -12,11 +12,10 @@ function App() {
   }
   return (
     <>
- {/*      <List /> */}
+      <List />
       <Form onAddActivity={handleAddActivity}/> 
     </>
   )
 }
 
 export default App
-/* TEST */
