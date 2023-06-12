@@ -3,7 +3,7 @@ import './App.css';
 import Form from "./components/form/index.jsx";
 import { uid } from "uid";
 import List from "./components/list/index.jsx";
-import useLocalStorageState from "use-local-storage-state";
+import useLocalStorageState from "";
 
 function App() {
   const [activities, setActivities] = useLocalStorageState("activities", { defaultValue: [], });
