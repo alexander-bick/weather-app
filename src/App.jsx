@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import Form from "./components/form/index.jsx";
 import { uid } from "uid";
-/* import List from "./components/list/index.jsx"; */
+import List from "./components/list/index.jsx";
 import useLocalStorageState from "use-local-storage-state";
 
 function App() {
@@ -14,6 +14,7 @@ function App() {
   return (
     <>
       <Form onAddActivity={handleAddActivity}/> 
+      <List activities={activities} />
     </>
   )
 }
