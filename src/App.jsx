@@ -3,10 +3,14 @@ import './App.css';
 import Form from "./components/form/index.jsx";
 import { uid } from "uid";
 import List from "./components/list/index.jsx";
-import useLocalStorageState from "";
+import useLocalStorageState from "use-local-storage-state";
 
 function App() {
   const [activities, setActivities] = useLocalStorageState("activities", { defaultValue: [], });
+  
+  const filteredActivities = activities.filter(
+    (activity) => activity.isForGoodWeather === weather?.isGoodWeather
+  );
 
   function handleAddActivity(newActivity) {
     setActivities([...activities, { id: uid(), ...newActivity }])
@@ -14,7 +18,7 @@ function App() {
   return (
     <>
       <Form onAddActivity={handleAddActivity}/> 
-      <List activities={activities} />
+      <List activities={filteredActivities} isGoodWeather={weather?.isGoodWeather} />
     </>
   )
 }
