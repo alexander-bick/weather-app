@@ -17,7 +17,7 @@ export default function Form({ onAddActivity }) {
         <form className="form" onSubmit={handleSubmit}>
           <h2>Add new Activity:</h2>
           <div className="form__input-container">
-            <label htmlFor="name">Type:</label>
+            <label htmlFor="name">Name:</label>
             <input id="name" type="text" name="name" />
           </div>
           <div className="form__input-container">
